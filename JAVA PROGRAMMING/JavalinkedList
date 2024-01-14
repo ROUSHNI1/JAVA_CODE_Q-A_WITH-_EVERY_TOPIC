@@ -1,0 +1,78 @@
+public class JavaLinkedList {
+    public static class Node{
+        int data;
+        Node next;
+
+        public Node(int data){
+            this.data = data;
+            this.next = null;
+        }
+    }
+    //add in Linked LIST step5
+    public void addFirst(int data){
+         
+        Node newNode = new Node(data);//firstly create new node
+        //jb apke pass 0  number node  hu that is apka linked List empty hu.
+        if (head == null) {
+            //toh agr LinkedList empty hu toh first node add krenge
+            head = tail = newNode;
+            //toh phele maene new node ko hi tail bnaya 
+            //fr tail me jo value thi new node ki then maene use hi maene head mae dal diya
+            return;
+        }
+        
+       
+
+     
+
+
+        //toh ye 3 steps tbke liye hae jb apke pass ek aur ek se jyda nodes huta hae...........
+        //step1 = create new node
+        //Node newNode = new Node(data); //toh ise upr first use krenge
+        //newNode banane ka process ye rhega ki Node class ka object bnawongi "newNode"
+        // newNode me pass kr dungi data aur after semicolon ye Node intialize hu jata hae
+        //yeh whi syntax jo hmlog object bnane wqt syntax use krte hae
+        //phele mene apne class ka naam likha node
+        //fir mene classke object ka name likha hae"newNode"
+        //fir mene new Keyword ko use kiya and fir mene class name likha
+        // aur Node ke constructor mae data pass kr diya hae;
+
+
+        //step2 - newNode next = head
+        //mera step 2 tha ki mera naya newNode ke next mae assign kr do Head ka value;
+        //mera naya newNode ka next hae wo point krega purane head ki traff toh ye kese possible huga
+        newNode.next = head; 
+        //
+        //link one node to another node's head , so this 
+        //in linking step where linkedList is created so how this is happen
+        //its add head's value is going through newNode ke next ke through
+        //newNode's next is storing head's reference i.e head address 
+        //agr kl head variable ki value change hu jate hae toh koi problem nhi
+        //kyunki maenae isme current address  head ki value hae wo toh maene next mae store kra li.
+        //toh head ka value change hune ke baad mae vi next purane node ka address store kiya hua huag
+        
+        //toh ab next 3rd step head  ka value ab newNode bn jaye
+        //3rd step - head = newNode
+        //here we are updating the head of our list with the newly added node,
+        head = null;
+
+    }
+
+    public static Node head; //1step
+    public static Node tail;  //2nd step
+
+
+    public  static void main(String args[]) {
+        JavaLinkedList ll = new JavaLinkedList(); //3rd step
+        // ll.head = new Node(1); //4th step 
+        // ll.head.next = new Node(2);  //5th step
+
+        //toh me add kese krungi element ko linked list
+        ll.addFirst(1); //linkedlist ll object se addfirst ke method call se 1 ko add kiya
+        ll.addFirst(2); //Linkedlist ll object se wese hi 2 ko add kiya hae
+        //toh mere likedlist me phele 1 value phela node add hugi and 2value 2nd node Linked LIST mae add krenege 
+        // ab dry run huga  time complexity addfirst() --> O(1) Constant Time Complexity because we are not using loops aur na hi recursion hae yhs case pr single constant process huta hae -- 
+    }
+
+    
+} 

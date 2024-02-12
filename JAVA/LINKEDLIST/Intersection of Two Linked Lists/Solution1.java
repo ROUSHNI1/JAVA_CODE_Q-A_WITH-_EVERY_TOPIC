@@ -1,4 +1,4 @@
-?//Time Complexity  : o(m*n)Space Complexity: o(1)
+//Time Complexity  : o(m*n)Space Complexity: o(1)
 import java.util.*;
 class Solution1 {
     static class Node {
@@ -20,7 +20,7 @@ class Solution1 {
             }return null;
     }
     public static void main(String[] args){
-        Solution list = new Solution();
+        Solution1 list = new Solution1();
         Node head1, head2;
         head1 = new Node(10);
         head2 = new Node(3);

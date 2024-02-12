@@ -1,4 +1,5 @@
 {
     "code-runner.runInTerminal": true,
-    "code-runner.saveAllFilesBeforeRun": true
+    "code-runner.saveAllFilesBeforeRun": true,
+    "java.debug.settings.onBuildFailureProceed": true
 }
